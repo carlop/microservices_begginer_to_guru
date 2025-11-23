@@ -16,4 +16,19 @@ public class BeerServiceImpl implements BeerService {
                 .upc(1000L)
                 .build();
     }
+
+    @Override
+    public BeerDTO saveNewBeer(BeerDTO beerDTO) {
+        return BeerDTO.builder()
+                .id(UUID.randomUUID())
+                .beerName(beerDTO.beerName())
+                .beerStyle(beerDTO.beerStyle())
+                .upc(beerDTO.upc())
+                .build();
+    }
+
+    @Override
+    public void updateBeer(UUID beer, BeerDTO beerDTO) {
+    }
+
 }
