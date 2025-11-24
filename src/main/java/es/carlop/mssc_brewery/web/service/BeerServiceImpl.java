@@ -1,10 +1,12 @@
 package es.carlop.mssc_brewery.web.service;
 
 import es.carlop.mssc_brewery.web.model.BeerDTO;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
+@Slf4j
 @Service
 public class BeerServiceImpl implements BeerService {
     @Override
@@ -29,6 +31,12 @@ public class BeerServiceImpl implements BeerService {
 
     @Override
     public void updateBeer(UUID beer, BeerDTO beerDTO) {
+        log.debug("Updating beer with id: {}. New data: {}", beer, beerDTO);
+    }
+
+    @Override
+    public void deleteById(UUID beerId) {
+        log.debug("Deleting beer with id: {}", beerId);
     }
 
 }
