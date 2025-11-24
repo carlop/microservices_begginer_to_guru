@@ -1,7 +1,8 @@
-package es.carlop.mssc_brewery.web.controller;
+package es.carlop.mssc_brewery.web.controller.v2;
 
 import es.carlop.mssc_brewery.web.model.BeerDTO;
 import es.carlop.mssc_brewery.web.service.BeerService;
+import es.carlop.mssc_brewery.web.service.v2.BeerServiceV2;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,14 +12,13 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 import java.util.UUID;
 
-@Deprecated
-@RequestMapping("/api/v1/beer")
+@RequestMapping("/api/v2/beer")
 @RestController
-public class BeerController {
+public class BeerControllerV2 {
 
-    private final BeerService beerService;
+    private final BeerServiceV2 beerService;
 
-    public BeerController(BeerService beerService) {
+    public BeerControllerV2(BeerServiceV2 beerService) {
         this.beerService = beerService;
     }
 
