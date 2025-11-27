@@ -11,7 +11,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 import java.util.UUID;
 
-@Deprecated
 @RequestMapping("/api/v1/beer")
 @RestController
 public class BeerController {
